@@ -25,6 +25,13 @@ const fonts = {
   body: `'Livvic', sans-serif`,
 };
 
-const theme = extendTheme({ colors, fonts, fontWeights, shadows });
+const textStyles = {
+  buttons: {
+    fontSize: '14px',
+    FontFace: fonts.body,
+  }
+}
+
+const theme = extendTheme({ colors, fonts, fontWeights, shadows, textStyles });
 
 export default theme; // Export the theme as the default export

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './styles/styleTheme';
 import { ChakraProvider } from '@chakra-ui/react';
+import Fonts from './styles/fontsTheme';
 
 import '@fontsource/monofett';
 import '@fontsource/livvic';
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
+      <Fonts />
       <App />
     </ChakraProvider>
   </React.StrictMode>

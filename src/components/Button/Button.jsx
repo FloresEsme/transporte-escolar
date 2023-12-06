@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import { Button as ChakraButton } from '@chakra-ui/react';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, bg, hover, borderRadius, label, variant, ...props }) => {
+export const Button = ({ primary, variant, label, bg, hover, borderRadius, ...props }) => {
   const [isHoverActive, setHoverActive] = useState(false);
 
   return (
@@ -32,21 +29,21 @@ export const Button = ({ primary, bg, hover, borderRadius, label, variant, ...pr
 
 Button.propTypes = {
   primary: PropTypes.bool,
+  variant: PropTypes.string,
+  label: PropTypes.string.isRequired,
   bg: PropTypes.string,
   hover: PropTypes.any,
   borderRadius: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'lg']),
-  label: PropTypes.string.isRequired,
-  variant: PropTypes.string,
+  // size: PropTypes.oneOf(['sm', 'md', 'lg']),
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
+  primary: true,
+  variant: 'solid',
   label: 'Button',
   bg: '#FFCA41',
   hover: { bg: '#EAA31B' },
   borderRadius: '20px',
-  primary: true,
   onClick: undefined,
-  variant: 'solid',
 };

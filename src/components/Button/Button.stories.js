@@ -48,17 +48,3 @@ export const Secondary = {
     onClick: undefined,
   },
 };
-
-// export const Large = {
-//   args: {
-//     size: 'lg',
-//     label: 'Button L',
-//   },
-// };
-
-// export const Small = {
-//   args: {
-//     size: 'sm',
-//     label: 'Button S',
-//   },
-// };

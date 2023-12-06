@@ -19,7 +19,6 @@ export const Button = ({ primary, variant, label, bg, hover, borderRadius, ...pr
       letterSpacing={'4px'}
       onMouseEnter={primary ? () => setHoverActive(true) : null}
       onMouseLeave={() => setHoverActive(false)}
-      // size={size}
       {...props}
     >
       {label}
@@ -34,7 +33,6 @@ Button.propTypes = {
   bg: PropTypes.string,
   hover: PropTypes.any,
   borderRadius: PropTypes.string,
-  // size: PropTypes.oneOf(['sm', 'md', 'lg']),
   onClick: PropTypes.func,
 };
 

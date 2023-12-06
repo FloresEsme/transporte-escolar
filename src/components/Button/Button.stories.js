@@ -24,7 +24,9 @@ export const Default = (args) => <Button {...args} />;
 export const Primary = {
   args: {
     primary: true,
-    backgroundColor: 'yellow',
+    bg: 'yellow',
+    hover: {bg: '#EAA31B'},
+    borderRadius: '20px',
     label: 'Button 1',
   },
 };
@@ -32,8 +34,11 @@ export const Primary = {
 export const Secondary = {
   args: {
     primary: false,
-    backgroundColor: 'orange',
+    bg: 'white',
     label: 'Button 2',
+    border: '2px',
+    borderColor: 'yellow',
+    borderRadius: '4px',
   },
 };
 

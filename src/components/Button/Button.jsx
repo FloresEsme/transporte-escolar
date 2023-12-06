@@ -5,21 +5,21 @@ import { Button as ChakraButton } from '@chakra-ui/react';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, bg, hover, borderRadius, label, ...props }) => {
+export const Button = ({ primary, bg, hover, borderRadius, label, variant, ...props }) => {
   const [isHoverActive, setHoverActive] = useState(false);
 
   return (
     <ChakraButton
       primary={primary}
-      variant={primary ? 'solid' : 'outline'} // Puedes ajustar los esquemas de colores según tus necesidades
+      variant={variant}
       bg={bg}
-      _hover={primary ? hover : { bg: '#FFCA41' }}
-      _active={{
-        transform: 'scale(.91)',
-      }}
+      _hover={hover}
+      _active={{ transform: 'scale(.96)' }}
       borderRadius={borderRadius}
-      px='143px'
+      px={primary ? '143px' : '64px'}
       color={isHoverActive ? '#FFFFFF' : null}
+      fontSize='14px'
+      letterSpacing={'4px'}
       onMouseEnter={primary ? () => setHoverActive(true) : null}
       onMouseLeave={() => setHoverActive(false)}
       // size={size}
@@ -35,8 +35,9 @@ Button.propTypes = {
   bg: PropTypes.string,
   hover: PropTypes.any,
   borderRadius: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'lg']), // Ajusta según las opciones de tamaño de Chakra UI
+  size: PropTypes.oneOf(['sm', 'lg']),
   label: PropTypes.string.isRequired,
+  variant: PropTypes.string,
   onClick: PropTypes.func,
 };
 
@@ -47,4 +48,5 @@ Button.defaultProps = {
   borderRadius: '20px',
   primary: true,
   onClick: undefined,
+  variant: 'solid',
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './Button';
 import theme from '../../styles/styleTheme';
 import { ChakraProvider } from '@chakra-ui/react';
+import Fonts from '../../styles/fontsTheme';
 
 export default {
   title: 'Components/Button',
@@ -12,6 +13,7 @@ export default {
   decorators: [
     (Story) => (
       <ChakraProvider theme={theme}>
+        <Fonts />
         {/* <CSSReset /> */}
         <Story />
       </ChakraProvider>
@@ -27,7 +29,9 @@ export const Primary = {
     bg: 'yellow',
     hover: {bg: '#EAA31B'},
     borderRadius: '20px',
-    label: 'Button 1',
+    label: 'Button',
+    hover: {bg: 'orange'},
+    variant: 'solid',
   },
 };
 
@@ -35,10 +39,12 @@ export const Secondary = {
   args: {
     primary: false,
     bg: 'white',
-    label: 'Button 2',
+    label: 'Alternative',
     border: '2px',
     borderColor: 'yellow',
     borderRadius: '4px',
+    _hover: {bg: 'yellow'},
+    variant: 'outline',
   },
 };
 

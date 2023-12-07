@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { Input, InputGroup, InputLeftElement, InputRightElement, Stack } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement, Stack } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/icons";
 import { FaUikit } from "react-icons/fa";
 

@@ -26,6 +26,7 @@ export const Default = (args) => <InputBox {...args} />;
 
 export const Name = {
     args: {
+        text: 'Nombre(s)',
         variant: 'outline',
         type: 'text',
         placeholder: 'Nombre(s)',
@@ -36,6 +37,7 @@ export const Name = {
 
 export const Lastname1 = {
     args: {
+        text: 'Apellido Paterno',
         variant: 'outline',
         type: 'text',
         placeholder: 'Apellido Paterno',
@@ -46,6 +48,7 @@ export const Lastname1 = {
 
 export const Lastname2 = {
     args: {
+        text: 'Apellido Materno',
         variant: 'outline',
         type: 'text',
         placeholder: 'Apellido Materno',
@@ -56,6 +59,7 @@ export const Lastname2 = {
 
 export const Placa = {
     args: {
+        text: 'Placa',
         variant: 'outline',
         type: 'text',
         placeholder: 'Placa',
@@ -66,6 +70,7 @@ export const Placa = {
 
 export const Password = {
     args: {
+        text: 'Contraseña',
         variant: 'outline',
         type: 'password',
         placeholder: 'Contraseña',

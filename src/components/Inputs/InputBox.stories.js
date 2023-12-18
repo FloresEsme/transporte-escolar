@@ -12,6 +12,7 @@ export default {
     parameters: {
         layout: 'centered',
     },
+    tags: ["autodocs"],
     decorators: [
         (Story) => (
             <ChakraProvider theme={theme}>

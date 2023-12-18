@@ -15,7 +15,6 @@ export default {
     (Story) => (
       <ChakraProvider theme={theme}>
         <Fonts />
-        {/* <CSSReset /> */}
         <Story />
       </ChakraProvider>
     ),

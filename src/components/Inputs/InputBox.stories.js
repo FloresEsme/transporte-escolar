@@ -3,7 +3,7 @@ import { InputBox } from "./InputBox";
 import theme from '../../styles/styleTheme';
 import { ChakraProvider } from '@chakra-ui/react';
 import Fonts from '../../styles/fontsTheme';
-import { FaUser, FaUnlockAlt, FaBus } from "react-icons/fa";
+import { FaUser, FaUnlockAlt, FaBus, FaMailBulk } from "react-icons/fa";
 
 
 export default {
@@ -75,5 +75,17 @@ export const Password = {
         type: 'password',
         placeholder: 'Contraseña',
         icon: FaUnlockAlt,
+        color: 'yellow',
+    },
+};
+
+export const Email = {
+    args: {
+        text: 'Correo electrónico',
+        variant: 'outline',
+        type: 'email',
+        placeholder: 'ejemplo@mail.com',
+        icon: FaMailBulk,
+        color: 'yellow',
     },
 };
